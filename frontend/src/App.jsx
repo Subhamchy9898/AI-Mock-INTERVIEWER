@@ -175,7 +175,7 @@ function App() {
     setAiStatus("checking");
 
     try {
-      const response = await fetch("http://localhost:5000/upload-resume", {
+      const response = await fetch("https://ai-mock-interviewer-szm7.onrender.com/upload-resume", {
         method: "POST",
         body: formData,
       });
@@ -404,7 +404,7 @@ function App() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/evaluate-answer", {
+      const response = await fetch("https://ai-mock-interviewer-szm7.onrender.com/evaluate-answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: current.question, answer: answerText }),
@@ -464,7 +464,7 @@ function App() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/generate-report", {
+      const response = await fetch("https://ai-mock-interviewer-szm7.onrender.com/generate-report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ evaluations, questions }),
