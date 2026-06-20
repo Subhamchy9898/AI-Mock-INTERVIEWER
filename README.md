@@ -4,9 +4,57 @@ An AI-powered mock interview platform that helps candidates prepare for technica
 
 ---
 
+## Live Demo
+
+### Frontend Application
+
+https://ai-mock-interviewer-frontend.onrender.com
+
+### Backend API
+
+https://ai-mock-interviewer-szm7.onrender.com
+
+---
+
+## Project Status
+
+**Current Version:** v1.0
+
+### Implemented Features
+
+✅ Resume Upload
+
+✅ Resume Analysis using AI
+
+✅ Candidate Profile Extraction
+
+✅ Personalized Interview Question Generation
+
+✅ Technical Interview Simulation
+
+✅ Project-Based Interview Simulation
+
+✅ HR Interview Simulation
+
+✅ AI Response Evaluation
+
+✅ Detailed Interview Feedback
+
+✅ Performance Scoring
+
+✅ PDF Report Generation
+
+✅ Frontend Deployment
+
+✅ Backend Deployment
+
+---
+
 ## Project Overview
 
-AI Mock Interviewer simulates real-world interview experiences by analyzing a candidate's profile and generating relevant interview questions. The platform evaluates responses, provides detailed feedback, and helps users identify strengths and areas for improvement before actual interviews.
+AI Mock Interviewer simulates real-world interview experiences by analyzing a candidate's profile and generating relevant interview questions.
+
+The platform evaluates responses, provides detailed feedback, and helps users identify strengths and areas for improvement before actual interviews.
 
 This project aims to make interview preparation more accessible, interactive, and data-driven using Artificial Intelligence.
 
@@ -14,57 +62,92 @@ This project aims to make interview preparation more accessible, interactive, an
 
 ## Features
 
-✅ AI-Powered Interview Question Generation
+### AI-Powered Resume Analysis
 
-✅ Technical & HR Interview Simulation
+The system analyzes uploaded resumes and extracts:
 
-✅ Resume-Based Interview Personalization
+* Technical Skills
+* Projects
+* Experience
+* Technologies
+* Professional Background
 
-✅ Real-Time AI Evaluation
+### Personalized Interview Questions
 
-✅ Detailed Performance Feedback
+Interview questions are generated dynamically based on the candidate's profile and skill set.
 
-✅ PDF Report Generation
+### Multiple Interview Categories
 
-✅ Modern and Responsive User Interface
+* Technical Round
+* Project Discussion Round
+* HR Round
 
-✅ Candidate Skill Assessment
+### AI Evaluation System
+
+Candidate responses are evaluated using AI based on:
+
+* Technical Accuracy
+* Communication Skills
+* Problem Solving Ability
+* Clarity of Explanation
+* Professionalism
+
+### Performance Report
+
+The platform generates a detailed report containing:
+
+* Technical Score
+* Project Score
+* HR Score
+* Overall Score
+* Strengths
+* Areas of Improvement
+* Personalized Feedback
+
+### PDF Report Download
+
+Candidates can download their interview evaluation report for future reference.
 
 ---
 
 ## How It Works
 
 ### Step 1: Upload Resume
-The candidate uploads their resume to the platform.
+
+The candidate uploads a PDF resume.
 
 ### Step 2: Resume Analysis
-The AI analyzes the uploaded resume and extracts relevant skills, technologies, projects, and experiences.
 
-### Step 3: Question Generation
-Based on the candidate's profile, AI generates personalized interview questions.
+The AI analyzes the uploaded resume and extracts:
 
-### Step 4: Mock Interview
-The user answers the generated questions.
+* Skills
+* Projects
+* Experience
+* Technologies
 
-### Step 5: AI Evaluation
-Responses are evaluated by the AI model based on:
+### Step 3: Candidate Profile Generation
 
-- Technical accuracy
-- Communication quality
-- Problem-solving approach
-- Confidence and clarity
+A structured candidate profile is created from the extracted resume information.
 
-### Step 6: Performance Report
-A detailed interview report is generated containing:
+### Step 4: Interview Question Generation
 
-- Overall Score
-- Strengths
-- Areas for Improvement
-- Personalized Feedback
-- Interview Summary
+AI generates personalized interview questions based on the candidate profile.
 
-### Step 7: Download Report
-The user can download the generated interview report as a PDF.
+### Step 5: Mock Interview Session
+
+The candidate answers the generated interview questions.
+
+### Step 6: AI Evaluation
+
+The AI evaluates responses and calculates performance scores.
+
+### Step 7: Report Generation
+
+A detailed interview report is generated.
+
+### Step 8: Download Report
+
+The candidate can download the report as a PDF.
 
 ---
 
@@ -72,56 +155,87 @@ The user can download the generated interview report as a PDF.
 
 ### Frontend
 
-- React.js
-- Vite
-- CSS
+* React.js
+* Vite
+* CSS
 
 ### Backend
 
-- Node.js
-- Express.js
+* Node.js
+* Express.js
 
 ### AI Integration
 
-- Google Gemini API
+* Google Gemini API
 
 ### Utilities
 
-- PDF Generation
-- File Upload Handling
+* PDF Generation
+* Multer (File Upload Handling)
+* PDF Parsing
+
+### Deployment
+
+* Render (Frontend)
+* Render (Backend)
+* GitHub
 
 ---
+
+## Project Architecture
+
+```text
+User
+  │
+  ▼
+Frontend (React + Vite)
+  │
+  ▼
+Backend API (Node.js + Express)
+  │
+  ▼
+Google Gemini API
+  │
+  ▼
+Interview Questions & Evaluation
+```
 
 ## Project Structure
 
-```
-
+```text
 AI-Mock-INTERVIEWER
 
 ├── backend
-│ ├── server.js
-│ ├── uploads
-│ └── package.json
+│   ├── server.js
+│   ├── uploads
+│   ├── package.json
+│   └── .env
 
 ├── frontend
-│ ├── src
-│ ├── public
-│ └── package.json
+│   ├── public
+│   ├── src
+│   ├── package.json
+│   └── vite.config.js
 
 ├── tools
 
-└── README.md
+├── README.md
 
+└── .gitignore
 ```
-
----
 
 ## Installation
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Mock-INTERVIEWER.git
+git clone https://github.com/Subhamchy9898/AI-Mock-INTERVIEWER.git
+```
+
+### Navigate to Project
+
+```bash
+cd AI-Mock-INTERVIEWER
 ```
 
 ### Install Backend Dependencies
@@ -134,21 +248,17 @@ npm install
 ### Install Frontend Dependencies
 
 ```bash
-cd frontend
+cd ../frontend
 npm install
 ```
 
----
-
 ## Environment Variables
 
-Create a `.env` file inside the backend folder:
+Create a `.env` file inside the backend directory.
 
 ```env
-GEMINI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_gemini_api_key
 ```
-
----
 
 ## Run Backend
 
@@ -157,7 +267,11 @@ cd backend
 npm start
 ```
 
----
+Backend will run on:
+
+```text
+http://localhost:10000
+```
 
 ## Run Frontend
 
@@ -166,18 +280,40 @@ cd frontend
 npm run dev
 ```
 
+Frontend will run on:
+
+```text
+http://localhost:5173
+```
+
+## Deployment
+
+### Frontend Deployment
+
+https://ai-mock-interviewer-frontend.onrender.com
+
+### Backend Deployment
+
+https://ai-mock-interviewer-szm7.onrender.com
+
+### Hosting Platform
+
+Render
+
 ---
 
 ## Future Enhancements
 
-- Voice-Based Interviews
-- Interview Recording
-- Authentication System
-- Candidate Dashboard
-- Interview History Tracking
-- Multiple Interview Domains
-- Industry-Specific Interview Sets
-- Analytics and Performance Trends
+* Voice-Based Interview System
+* Speech-to-Text Integration
+* Authentication System
+* Candidate Dashboard
+* Interview History Tracking
+* Industry-Specific Interview Sets
+* Analytics Dashboard
+* Performance Trends
+* Company-Specific Interview Preparation
+* AI Career Guidance
 
 ---
 
@@ -185,25 +321,33 @@ npm run dev
 
 This project helped in understanding:
 
-- Full Stack Development
-- React Application Architecture
-- REST API Development
-- AI Integration using Gemini
-- File Upload Handling
-- PDF Generation
-- State Management
-- Deployment Workflow
+* Full Stack Development
+* React Application Architecture
+* REST API Development
+* AI Integration using Gemini API
+* Resume Parsing
+* File Upload Handling
+* PDF Generation
+* State Management
+* Deployment Workflow
+* Frontend and Backend Hosting
+* Production Environment Configuration
 
 ---
 
 ## Author
 
-**Subham Choudhary**
+### Subham Choudhary
 
 BCA Student | Full Stack Development | AI Enthusiast
+
+GitHub:
+https://github.com/Subhamchy9898
 
 ---
 
 ## License
 
-This project is developed for educational and portfolio purposes.
+This project is developed for educational, learning, and portfolio purposes.
+
+© 2026 Subham Choudhary
