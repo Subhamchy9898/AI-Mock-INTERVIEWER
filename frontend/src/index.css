@@ -15,8 +15,8 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  font: 16px/150% var(--sans);
+  letter-spacing: 0.15px;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -25,11 +25,13 @@
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 }
-
-
 
 body {
   margin: 0;
@@ -44,6 +46,11 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding: 0 16px;
+  
+  @media (max-width: 768px) {
+    padding: 0 8px;
+  }
 }
 
 h1,
@@ -54,23 +61,32 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem );
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -1.2px;
+  margin: 24px 0;
+  
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin: 18px 0;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin: 14px 0;
   }
 }
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.2px;
+  margin: 0 0 6px;
+  
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -84,22 +100,8 @@ code,
 }
 
 code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 130%;
+  padding: 3px 6px;
   background: var(--code-bg);
-}
-
-@media (max-width: 768px) {
-  #root {
-    padding: 0 12px;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
 }
